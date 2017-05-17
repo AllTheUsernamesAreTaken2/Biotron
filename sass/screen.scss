@@ -1,0 +1,818 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "singularitygs";
+@import "breakpoint";
+
+//VARIABLES
+
+$medium_blue:#00a3c9;
+$light_blue: #ddebef;
+$dark_blue: #223843;
+$bright_blue: #c9f5ff;
+$off_white: #fcfdff;
+$light_green:#f0f7ee;
+$accordion_blue: #083d77;
+
+$max_width: 1349px;
+$min_width: 350px;
+
+
+//MIXINS
+
+/*Singularitygs Debugger
+
+@include sgs-change('debug', true);
+
+.container {
+  @include background-grid($color: blue);
+}
+
+*/
+
+//GENERAL
+
+header {
+    background-color: $medium_blue;
+    display: block;
+    margin: auto;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    font-family: 'Open Sans', sans-serif;
+    line-height:35px;
+    width:100%;
+    background-color: lighten(lightgrey, 10%);
+}
+
+main {
+    margin-left:6%;
+    margin-right:6%;
+    margin-top:1em;
+}
+
+footer {
+    background-color: $dark_blue;
+    padding: 3em;
+    margin:0;
+    color:#FFFFFF;
+}
+
+hr {
+    width: auto;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}   
+
+a{
+    text-decoration: none;
+    color: #337ab7;
+    
+    &:hover {
+        color:$dark_blue;
+    }
+}
+
+h2 {
+    font-size: 35px;
+}
+
+h3 {
+    font-size:30px;
+}
+
+//FONT
+
+.bold {
+    font-weight:600;
+}
+
+.italic {
+    font-style:italic;
+}
+
+.anchor_link {
+    color:black;
+}
+
+//LANDING PAGE
+.container {
+    margin:auto;
+    background-color: $off_white;
+    box-shadow: 0px 0 7px 5px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+    background-color:black;
+    color:#FFFFFF;
+    width: $max_width;
+    font-size:18px;
+    padding:0.5em;
+    position:fixed;
+    z-index:1;
+    box-sizing:border-box;
+    
+    ul {
+        float: right;
+        margin-right: 7%;
+        
+        li {
+            padding-left:25pt;
+            display:inline-block;
+        }
+    }
+    
+    h1 {
+        display:inline-block;
+        margin-left:8%;
+        
+        a {
+            color:white;
+        }
+    }
+    
+}
+
+.nav_link {
+    color:white;
+        &:hover {
+            color:$bright_blue;      
+        }
+}
+
+#hamburger {
+    display:none;
+    cursor:pointer;
+    
+    &:hover {
+      color:$bright_blue;  
+    }
+}
+
+#hamburger_list {
+    margin-top: 0.5em;
+    margin-left: 8%;
+    margin-right: 2%;
+    float:none;
+    text-align:right;
+    
+    li {
+        display: block;
+        line-height:40px;
+        padding:0;
+        
+        &:hover {
+            background-color:lighten(black, 20%);
+        }
+        
+        a {
+            display:block;
+            padding-right:1em;
+        }
+    }
+}
+
+#banner_image {
+    display:block;
+    margin:auto;
+    padding-top:3em;
+    width:85%;
+}
+
+.top_padding {
+    padding-top:2em;
+}
+
+.half_content{
+    width: 49%;
+    display: inline-block;
+    padding: 2em;
+    vertical-align:top;
+    box-sizing: border-box;
+    
+    h2 {
+        margin-bottom:1vh;
+    }
+}
+
+.small_project_callout {
+    padding:2em;
+    background-color: lighten($light_blue,5%);
+    border: 3px solid #083d77;
+    text-align:center;
+}
+
+.project_list {
+    text-align: center;
+    font-size:20px;
+    display:inline-block;
+    padding-left:1em;
+    padding-right:1em;
+    margin-top:5%;
+    margin-bottom:5%;
+}
+
+.colour_header {
+    padding:0.5em;
+}
+
+.padded_p {
+    margin-top:2%;
+}
+
+.dropdown_list {
+    width: 100%;
+    text-align: center;
+    font-size: 19px;
+    border: none;
+    background-color: $light_blue;
+    padding: 0.25em;
+    border-top-left-radius: 10px;
+}
+
+.carousel_tabs {
+    margin-top:2em;
+}
+
+.carousel_tab {
+    display:inline-block;
+    width:137px;
+    text-align:center;
+    font-size:19px;
+    padding:0.25em;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: $light_blue;
+    
+    &:hover {
+        background-color:lighten($light_blue, 5%);
+        cursor:pointer;
+        color:$medium_blue;
+        }
+}
+
+.clicked {
+    background-color:lighten($light_blue, 5%);
+    color:$medium_blue;
+}
+
+.project_callout {
+    padding-left:5em;
+    padding-right:5em;
+}
+
+.tab_section {
+    height:44vw;
+    overflow:hidden;
+}
+
+.tab_image {
+    width:100%;
+    display:none;
+}
+
+.position_anchor {
+    height:0;
+    width:0;
+    position:relative;
+}
+
+.tab_description {
+    background: rgba(255, 255, 255, 0.8);
+    position:relative;
+    bottom:12.5em;    
+    width:785px;
+    left:1.5em;
+    padding:1em;
+    display:none;
+}
+
+.current_tab {
+    display:block;
+}
+
+.sponsor_row {
+    width:100%;
+}
+
+.image_box {
+    display:inline-block;
+    width:27%;
+    height:auto;
+    padding:2em;
+    margin:2em;
+    overflow:hidden;
+    padding-top:1em;
+    padding-bottom:0;
+    margin-bottom:0;
+    box-sizing: border-box;
+}
+
+.sponsor {
+    display:block;
+    height:auto;
+    width:100%;
+}
+
+.contact {
+    margin-top:2em;
+    text-align:center;
+    
+    h2 {
+        margin-bottom:3px;
+    }
+}
+
+.contact_callout {
+    font-size: 19px;
+    padding-bottom: 2em;
+    line-height: 40px;
+}
+
+#copyright {
+    display:inline-block;
+    margin-left:2%;
+}
+
+.social_links {
+    display: inline-block;
+    float: right;
+    margin-right: 5%;
+    width: 12em;
+    padding-left:2em;
+    
+    a {
+        color: #FFFFFF;
+        padding-left:2em;
+        
+        &:hover {
+            color:$bright_blue;
+        }
+    }
+
+}
+
+.margins {
+    margin-left:4%;
+    margin-right:4%;
+}
+
+.set_line {
+    width:84%;
+}
+
+
+//TEAM PAGES
+
+.team_margins {
+    margin-left:6%;
+    margin-right:6%;
+}
+
+.team_header {
+    background-color: $bright_blue;
+    margin-bottom:1em;
+}
+
+.team_title {
+    padding:2em;
+    padding-top:5em;
+}
+
+.team_header_one {
+    font-size:45px;
+    margin-bottom:0.5em;
+    text-align: center;
+}
+
+.tagline {
+    text-align:center;
+    font-size:27px;
+}
+
+.team_about{
+    display:inline-block;
+    width:54%;
+    padding-top:2em;
+    padding-right:2em;
+    vertical-align: top;
+    box-sizing: border-box;
+}
+
+.team_about_image {
+    display:inline-block;
+    width:45%;
+    padding:2em;
+    padding-right:0;
+    box-sizing: border-box;
+}
+
+.team_content {
+    padding-top:2em;
+    padding-bottom:2em;
+    box-sizing:border-box;
+}
+
+.team_header_two {
+    font-size: 35px;
+    margin-bottom:0.5em;
+}
+
+.team_header_three {
+    font-size:25px;
+    margin-bottom:0.5em;
+}
+
+.center_header {
+    text-align:center;
+}
+
+.accordion_header{
+    font-size:25px;
+    background-color:$accordion_blue;
+    padding:1em;
+    color:white;
+}
+
+.project_one_content, .project_two_content {
+    background-color: lighten($light_blue, 5%);
+    padding:1em;
+    padding-top:0;
+}
+
+.subproject_header_description{
+    font-size:20px;
+}
+
+.expand, .collapse {
+    float: right;
+    font-size: 35px;
+    padding-right: 1%;
+    cursor:pointer;
+    width:35px;
+    text-align:center;
+    
+    &:hover {
+        color:$medium_blue;
+    }
+}
+
+.subproject_text {
+    font-size:15px;
+    padding:1.5em;
+    padding-bottom:0;
+}
+
+.collapsed {
+    display:none;
+}
+
+.expanded {
+    display:inline-block;
+}
+
+.carousel {
+    padding-left: 10%;
+    padding-top: 2em;
+    padding-bottom:1.5em;
+    width:100%;
+    margin:auto;
+    margin-top:1em;
+}
+
+.slick-current {
+    width:765px;
+}
+
+.slick-list {
+    width:75%;
+    display:inline-block !important;
+}
+
+.slick-arrow {
+    font-size: 55px;
+    border: none;
+    vertical-align: top;
+    padding-top:15%;
+    cursor:pointer;
+    background-color: $off_white;
+    
+    &:hover {
+        color:$medium_blue;
+        border:none;
+    }
+}
+
+.carousel_image {
+    width:98%;
+    margin: auto;
+    box-shadow: 0 0 3px 4px rgba(0, 0, 0, 0.3);
+}
+
+.team_section {
+    width:33%;
+    display:table-cell;
+    padding:2em;
+    padding-bottom: 0;
+    padding-top:1em;
+    margin-top:1em;
+    box-sizing:border-box;
+    height:100%;
+    vertical-align:top;
+    
+    p {
+        padding-bottom:1em;
+    }
+}
+
+.section_image {
+    width:100%;
+}
+
+.blue_section {
+    background-color:#E5F2FF;
+}
+
+.green_section {
+    background-color:$light_green;
+}
+
+.team_contact_callout {
+    font-size:16px;
+}
+
+
+//RESPONSIVENESS
+
+/*Breakpoint Notes:
+    1) Only number is given, assume min-width
+    2) Both values are numbers, sets min and max width
+    3) String and number is a feature-value pair
+*/
+
+@include breakpoint($max_width + 20) {
+    
+    .tab_section {
+        height:610px;
+    }
+    
+    .position_anchor {
+        height:auto;
+        width:auto;
+    }
+    
+    .tab_description {
+        background-color:lighten($light_blue, 5%);
+        position:static;
+        width:100%;
+        box-sizing:border-box;
+    }
+}
+
+
+
+@include breakpoint (0 450px) {
+    .image_box {
+        margin:0;
+        width:100%;
+    }
+}
+
+@include breakpoint (450px 800px) {
+    .image_box {
+        width:45%;
+        margin:0;
+    }
+}
+
+@include breakpoint (800px 1000px) {
+    .image_box {
+        margin:0;
+        width:32%;
+    }
+}
+
+@include breakpoint (1000px 1275px) {
+    .image_box {
+        margin:1em;
+        width:29%;
+    }
+}
+
+@include breakpoint(970px 1200px) {
+    .carousel_tab {
+        width:110px;
+        font-size:17px;
+    }
+}
+
+@include breakpoint(0px 970px) {
+    .carousel_tab {
+        display:none;
+    }
+}
+
+@include breakpoint(802px 1182px) {
+      .project_list {
+        padding:0;
+        margin:0;
+        width:100%;
+    }      
+}
+
+//team section
+@include breakpoint(0px 905px) {
+    @include add-grid(2);
+    
+    .team_section {
+        @include grid-span(2,1);
+    }
+    
+    .section_image {
+        width:94%;
+        margin:auto;
+        display:block;
+    }
+    
+        
+    .bottom_margin {
+    margin-bottom:2em;
+    }
+}
+
+
+
+@include breakpoint(0px 800px) {
+    
+    .half_content {
+        @include grid-span(2, 1);
+        padding-right:0;
+    }
+    
+    .contact {
+        padding:1em;
+    }
+    
+    #copyright {
+        display: block;
+        margin:auto;
+        text-align: center;
+    }
+    
+    .social_links {
+        padding:0;
+        float:none;
+        display:block;
+        margin:auto;
+        margin-top:1em;
+    }
+
+}
+
+@include breakpoint(0 1020px) {
+    .team_about, .team_about_image {
+        @include grid-span(2, 1);
+    }
+    
+    .team_about .team_header_two {
+        text-align: center;
+    }
+    
+    .team_about {
+        padding-right:0;
+    }
+    .team_about_image {
+        padding-left:0;
+        padding-top:0;
+    }
+    
+    .carousel {
+        padding-left:7%;
+    }
+    
+    .nav_list {
+        display:none;
+    }
+    
+    #hamburger {
+        display:inline-block;
+        float:right;
+        margin-right:4%;
+    }
+}
+
+@include breakpoint(0 1100px) {
+    .position_anchor {
+        height:auto;
+        width:auto;
+    }
+    
+    .tab_description {
+        background-color:lighten($light_blue, 5%);
+        position:static;
+        width:100%;
+        box-sizing:border-box;
+    }
+
+}
+
+@include breakpoint (0 $max_width) {
+    
+    .navbar {
+        width:100%;
+    }
+}
+
+@include breakpoint ($max_width) {
+    .container {
+        width:$max_width;
+    }
+}
+
+@include breakpoint (0px 700px) {
+    .subproject_header_description {
+        display:none;
+    }
+}
+
+
+@include breakpoint (0px 655px) {
+    
+    .carousel, .slick_slider {
+        display:none !important;
+    }
+    
+    .team_header_one {
+        line-height:50px;
+    }
+    
+    .project_callout {
+        padding-left:1em;
+        padding-right:1em;
+    }
+    
+    hr {
+        display:none;
+    }
+}
+
+
+@include breakpoint(0 542px) {
+     .project_list {
+        padding:0;
+        margin:0;
+        width:100%;
+    }   
+}
+
+
+@include breakpoint(0px $min_width) {
+    
+    #main_container {
+        margin-top:3em;
+    }
+    
+    .navbar {
+        top:0px;
+        
+        h1 {
+            margin-left:1%;
+        }
+    }
+    
+    .half_content {
+        padding:1em;
+    }
+    
+    .small_project_callout {
+        padding:1em;
+    }
+    
+    #banner_image {
+        display:none;
+    }
+    
+    .team_about_image {
+        display:none;
+    }
+    
+    #project_list_container {
+        width:100%;
+    }
+    
+    .tab_description {
+        padding-right:0;
+    }
+    
+    .section_image {
+        width:100%;
+    }
+   
+}
+

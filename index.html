@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>BioTron</title>
+     <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://use.fontawesome.com/7e513ac34f.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="scripts/jquery.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="container" id="main_container">
+        <header>
+            <section class="navbar">
+                <h1><a href="index.html" class="nav_link">BioMechatronics Club</a></h1>
+                <ul class="nav_list">
+                    <li><a href="powered_arm.html" class="nav_link">Powered Arm</a></li>
+                    <li><a href="bci.html" class="nav_link">BCI</a></li>
+                    <li><a href="enable.html" class="nav_link">Enable</a></li>
+                    <li><a href="atlas.html" class="nav_link">Atlas</a></li>
+                    <li><a href="beowulf.html" class="nav_link">Beowulf</a></li>
+                    <li><a href="pillow.html" class="nav_link">Pillow Project</a></li>
+                </ul>
+                <i class="fa fa-2x fa-bars" id="hamburger" aria-hidden="true"></i>
+                <ul id="hamburger_list" class="collapsed">
+                    <li><a href="powered_arm.html" class="nav_link">Powered Arm</a></li>
+                    <li><a href="bci.html" class="nav_link">BCI</a></li>
+                    <li><a href="enable.html" class="nav_link">Enable</a></li>
+                    <li><a href="atlas.html" class="nav_link">Atlas</a></li>
+                    <li><a href="beowulf.html" class="nav_link">Beowulf</a></li>
+                    <li><a href="pillow.html" class="nav_link">Pillow Project</a></li>
+                </ul>
+            </section>
+            <img id="banner_image" src="images/BioTronHQ.jpg" alt="Biomechatronics University of Waterloo header">
+        </header>
+        
+        <div class="margins">
+        
+            <section class="top_padding"> 
+                <h2 class="center_header">About Us</h2>
+                <article class="half_content">
+                    <p>
+                        Our goal is to enable students to learn about and work with engineering systems that interface with the human body.
+                        <br />
+                        We accomplish this by creating a community of passionate students, centered around the field of biomechatronics. We host workshops and other learning events to provide students with the skills they need to do meaningful work, and we also provide students with the resources they need to start up their own projects in the field.
+                    </p>
+                </article>
+                <article class="half_content">
+                    <div class="small_project_callout">
+                        <p>    
+                            Currently, the biomechatronics club fosters 6 projects:
+                        </p>
+                        <div>
+                            <p class="project_list">
+                                <a href="beowulf.html">Beowulf</a> <br/>
+                                <a href="bci.html">BCI</a><br/>
+                                <a href="powered_arm.html">Powered Arm</a><br/>
+                            </p>
+                            <p class="project_list">
+                                <a href="atlas.html">Atlas</a><br/>
+                                <a href="enable.html">Enable</a><br/>
+                                <a href="pillow.html">The Pillow Project</a>
+                            </p>
+                        </div>
+                        <p>    
+                            <a href="#carousel">Details</a> about them can be found on their respective pages.
+                        </p>
+                    </div>
+                </article>
+            </section>
+            <hr/>
+            <section class="top_padding">
+                <h2 class="center_header">Get Involved</h2>
+                <article class="half_content">
+                    <h3 class="center_header colour_header blue_section">Students</h3>
+                    <p class="padded_p">
+                    Get involved by joining our <a href="https://www.facebook.com/UWBioTron/" target="_blank">Facebook</a> page! There we will post about all of our events, which are always open to anyone who's interested. Workshops are a great way to get involved, meet other club members, and to learn about topics from processing EMG data to coding neural networks.
+                    </p>
+                </article>
+                <article class="half_content">
+                    <h3 class="center_header colour_header green_section">Sponsors</h3>
+                    <p class="padded_p">
+                    Bacon ipsum dolor amet short ribs pork tri-tip, beef ribs kielbasa pork loin bacon frankfurter cow porchetta ball tip bresaola biltong. Prosciutto ground round swine short loin leberkas strip steak, ball tip kevin biltong cupim boudin pancetta doner pork beef. <br />
+                    <a href="#sponsors">View our current sponsors</a>
+                    </p>
+                </article>
+            </section>
+        
+            <hr />
+
+            <section class="team_content project_callout">
+                <h2 class="center_header"><a name="carousel" class="anchor_link">Join Our Projects!</a></h2>
+                <ul class="carousel_tabs">
+                    <li class="carousel_tab clicked" id="powered_arm_carousel">Powered Arm <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                    <li class="carousel_tab" id="bci_carousel">BCI <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                    <li class="carousel_tab" id="enable_carousel">Enable <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                    <li class="carousel_tab" id="atlas_carousel">Atlas <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                    <li class="carousel_tab" id="beowulf_carousel">Beowulf <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                    <li class="carousel_tab" id="pillow_carousel">Pillow Project <span class="down_arrow collapsed">&#9660;</span><span class="up_arrow collapsed">&#9650;</span></li>
+                </ul>
+                
+                <select class="dropdown_list collapsed">
+                    <option value="powered_arm" class="carousel_tab_dropdown" id="powered_arm_drop_carousel">Powered Arm</option>
+                    <option value="bci" class="carousel_tab_dropdown" id="bci_drop_carousel">BCI</option>
+                    <option value="enable" class="carousel_tab_dropdown" id="enable_drop_carousel">Enable</option>
+                    <option value="atlas" class="carousel_tab_dropdown" id="atlas_drop_carousel">Atlas</option>
+                    <option value="beowulf" class="carousel_tab_dropdown" id="beowulf_drop_carousel">Beowulf</option>
+                    <option value="pillow_project" class="carousel_tab_dropdown" id="pillow_drop_carousel">Pillow Project</option>
+                </select>
+            
+                <div class="tab_section">
+                    <img class="tab_image powered_arm_carousel current_tab" src="images/PoweredArm.png">
+                    <img class="tab_image bci_carousel" src="images/BCIAbout.jpg">
+                    <img class="tab_image enable_carousel" src="images/enableWhat.png">
+                    <img class="tab_image atlas_carousel" src="images/atlasWhatjpg.jpg">
+                    <img class="tab_image beowulf_carousel" src="images/BeowulfWires.jpg">
+                    <img class="tab_image pillow_carousel" src="images/PillowWhatDoWeDo.png">
+                </div>
+                <div class="position_anchor powered_arm_carousel current_tab">
+                    <p class="tab_description powered_arm_carousel current_tab">1 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="powered_arm.html">Find out more!</a></p>
+                </div>
+                <div class="position_anchor bci_carousel">
+                    <p class="tab_description bci_carousel">2 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="bci.html">Find out more!</a></p>
+                </div>
+                <div class="position_anchor enable_carousel">
+                    <p class="tab_description enable_carousel">3 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="enable.html">Find out more!</a></p>
+                </div>
+                <div class="position_anchor atlas_carousel">
+                    <p class="tab_description atlas_carousel">4 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="atlas.html">Find out more!</a></p>
+                </div>
+                <div class="position_anchor beowulf_carousel">
+                    <p class="tab_description beowulf_carousel">5 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="beowulf.html">Find out more!</a></p>
+                </div>
+                <div class="position_anchor pillow_carousel">
+                    <p class="tab_description pillow_carousel">6 Bacon ipsum dolor amet beef ribs filet mignon turducken ball tip tenderloin jowl. Jowl leberkas pork loin sirloin doner capicola shankle. Turkey tongue kielbasa shankle pork loin shank rump t-bone salami cupim sausage turducken. Pastrami jowl picanha tongue, rump shoulder pancetta pork chop ribeye. 
+                    <br/>
+                    <a href="pillow.html">Find out more!</a></p>
+                </div>
+            </section>
+
+            <hr/>
+            
+            <section class="team_content">
+                <h2 class="center_header"><a name="sponsors" class="anchor_link">Our Sponsors</a></h2>
+                <div class="sponsor_row">
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-one.png"/>
+                    </div>
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-two.png"/>
+                    </div>
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-three.png"/>
+                    </div>
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-four.png"/>
+                    </div>
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-five.png"/>
+                    </div>
+                    <div class="image_box">
+                        <img class="sponsor" src="images/logo-six.png"/>
+                    </div>
+                </div>
+            </section>
+        
+        </div>
+            
+        <hr class="set_line" />
+        <section class="contact">
+            <h2>Contact Us</h2>
+            <p class="contact_callout">
+                We'd love to answer any and all questions you have about our organization. 
+                <br>
+                Connect with us on <a href="https://www.facebook.com/UWBioTron/">Facebook</a> or shoot us an email at <a href=
+    "mailto:biomechatronics.uw@gmail.com">biomechatronics.uw@gmail.com</a>
+            </p>
+        </section>
+
+        <footer>
+            <p id="copyright">&#9400; Copyright 2016 UW BioMechatronics Club</p>
+            <div class="social_links">
+                <a href="https://www.facebook.com/UWBioTron/" target="_blank"><i class="fa fa-facebook fa-2x"></i></a>
+                <a href="mailto:biomechatronics.uw@gmail.com"><i class="fa fa-envelope-o fa-2x"></i></a>
+                <a href="https://www.twitter.com/BioTronUW/" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+    
+</html>
